@@ -33,12 +33,14 @@ C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\D
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1.csproj.SuggestedBindingRedirects.cache
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\MainWindow.g.cs
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\Window1.g.cs
+C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ZavOtdeleniya.g.cs
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\App.g.cs
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1_Content.g.cs
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1_MarkupCompile.cache
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1_MarkupCompile.lref
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\MainWindow.baml
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\Window1.baml
+C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ZavOtdeleniya.baml
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1.g.resources
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1.Properties.Resources.resources
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1.csproj.GenerateResource.cache

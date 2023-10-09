@@ -25,5 +25,17 @@
         <ScalarProperty Name="login" ColumnName="login" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="Group">
+      <EntityTypeMapping TypeName="UserModel.Group">
+        <MappingFragment StoreEntitySet="Group">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="count_classes" ColumnName="count_classes" />
+          <ScalarProperty Name="sub_group" ColumnName="sub_group" />
+          <ScalarProperty Name="litera" ColumnName="litera" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

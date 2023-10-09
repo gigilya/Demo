@@ -32,18 +32,34 @@ namespace ДЭ1
             if ( users.Count == 1)
             {
                 User user = users[0];
-                string roles = "";
-                string separator = ",";
-                bool addSeparator = false;
+                List <string> roles = new List<string>();
+                string separator = ", ";
+
                 foreach (Role role in user.Role)
                 {
-
+                    roles.Add(role.name);
                 }
-                Window1 window1 = new Window1();
-                Hide();
-                window1.ShowDialog();
-                Show();
+
+                MessageBox.Show(string.Join(separator, roles), "Роли");
+
+                if (roles.Contains("Заведущая отделения"))
+                {
+                    ZavOtdeleniya zavOtdeleniya = new ZavOtdeleniya();
+                    Hide();
+                    zavOtdeleniya.ShowDialog();
+                    Show();
+                }
+
+                else
+                {
+                    Window1 window1 = new Window1();
+                    Hide();
+                    window1.ShowDialog();
+                    Show();
+                }
             }
+                else MessageBox.Show("говно переделывай");
+            
        
         }
     }

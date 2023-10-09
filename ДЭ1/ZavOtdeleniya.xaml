@@ -1,0 +1,22 @@
+﻿<Window x:Class="ДЭ1.ZavOtdeleniya"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ДЭ1"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Closed="Window_Closed"
+        Title="ZavOtdeleniya" Height="450" Width="400">
+    <Grid>
+        <DataGrid x:Name="group_grid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Год поступления" Binding="{Binding year}"/>
+                <DataGridTextColumn Header="Литерал" Binding="{Binding litera}"/>
+                <DataGridTextColumn Header="Подгруппа" Binding="{Binding sub_group}"/>
+                <DataGridTextColumn Header="Классов" Binding="{Binding count_classes}"/>
+                <DataGridTextColumn Header="Полное название" Binding="{Binding name}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
