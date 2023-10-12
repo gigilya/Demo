@@ -44,9 +44,13 @@ namespace ДЭ1
 
                 if (roles.Contains("Заведущая отделения"))
                 {
-                    ZavOtdeleniya zavOtdeleniya = new ZavOtdeleniya();
+                    //ZavOtdeleniya zavOtdeleniya = new ZavOtdeleniya();
+                    //Hide();
+                    //zavOtdeleniya.Show();
+                    Show();
+                    AddStudent addStudent = new AddStudent();
                     Hide();
-                    zavOtdeleniya.ShowDialog();
+                    addStudent.ShowDialog();
                     Show();
                 }
 
