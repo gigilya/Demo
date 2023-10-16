@@ -6,17 +6,35 @@
         xmlns:local="clr-namespace:ДЭ1"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Closed="Window_Closed"
         Title="AddStudent" Height="450" Width="800">
     <Grid>
-        <DockPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="1" Grid.Row="1">
             <StackPanel>
-                <ComboBox>
-                    
-                </ComboBox>
-               
+                <Label Content="Студент"/>
+                <ComboBox SelectedItem="{Binding FIO}" x:Name="AddNameStudent"/>
+                <Label Content="Группа"/>
+                <ComboBox x:Name="AddGroupStudent"/>
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Center">
+                    <Button Content="Отменить" 
+                            Click="Cancel_click" 
+                            Margin="10"/>
+                    <Button Content="Добавить" 
+                            Click ="Add_click" 
+                            Margin="10"/>
+                </StackPanel>
             </StackPanel>
         </DockPanel>
-        
+
     </Grid>
 </Window>

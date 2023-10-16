@@ -33,7 +33,15 @@ namespace ДЭ1
         private void Window_Closed(object sender, EventArgs e)
         {
             Singleton.BD.SaveChanges();
-            
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddStudent addStudent = new AddStudent();
+            Hide();
+            addStudent.ShowDialog();
+            Show();
+        }
+
     }
 }

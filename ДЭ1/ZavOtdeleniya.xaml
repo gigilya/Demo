@@ -9,7 +9,15 @@
         Closed="Window_Closed"
         Title="ZavOtdeleniya" Height="450" Width="400">
     <Grid>
-        <DataGrid x:Name="group_grid" AutoGenerateColumns="False">
+        <Button Content="Добавить" 
+                Width="100" 
+                Height="25" 
+                VerticalAlignment="Bottom"
+                Click="Button_Click"/>
+        <DataGrid x:Name="group_grid" 
+                  AutoGenerateColumns="False" 
+                  Height="auto" 
+                  VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Год поступления" Binding="{Binding year}"/>
                 <DataGridTextColumn Header="Литерал" Binding="{Binding litera}"/>

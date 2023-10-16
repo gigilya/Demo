@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,18 +23,32 @@ namespace ДЭ1
         public AddStudent()
         {
             InitializeComponent();
+            //Loaded += Window_Loaded;
         }
 
-        
-
-        private void Window_Closed(object sender, EventArgs e)
+        private void AddStudent_Loaded(object sender, RoutedEventArgs e)
         {
-
+            throw new NotImplementedException();
         }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //add_student.ItemsSource = Singleton.BD.Entrant.Local;
+            AddGroupStudent.ItemsSource = Singleton.BD.Group.Local.ToList();
+            AddGroupStudent.DisplayMemberPath = "name";
+        }
+
+        private void Cancel_click(object sender, RoutedEventArgs e) => DialogResult = false;
+ 
+
+        private void Add_click(object sender, RoutedEventArgs e)
+        {
             Singleton.BD.SaveChanges();
-            //add_student.ItemsSource = Singleton.BD.User.Local;
+        }
+        private void Add_group_student (object sender, RoutedEventArgs e)
+        {
+            //Group group = new Group();
+
         }
     }
 }
