@@ -13,10 +13,10 @@ namespace ДЭ1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class UserEntities3 : DbContext
+    public partial class UserEntities4 : DbContext
     {
-        public UserEntities3()
-            : base("name=UserEntities3")
+        public UserEntities4()
+            : base("name=UserEntities4")
         {
         }
     
@@ -25,8 +25,9 @@ namespace ДЭ1
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Applicant> Applicant { get; set; }
+        public virtual DbSet<Group> Group { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<User> User { get; set; }
-        public virtual DbSet<Group> Group { get; set; }
     }
 }

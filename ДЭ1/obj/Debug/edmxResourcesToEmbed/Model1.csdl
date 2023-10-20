@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="UserModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Applicant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="first_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="year" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="litera" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sub_group" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+    <Property Name="count_classes" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="33" FixedLength="false" Unicode="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
   <EntityType Name="Role">
     <Key>
       <PropertyRef Name="id" />
@@ -20,24 +40,14 @@
     <End Role="Role" Type="Self.Role" Multiplicity="*" />
     <End Role="User" Type="Self.User" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="UserEntities3" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="UserEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Applicant" EntityType="Self.Applicant" />
+    <EntitySet Name="Group" EntityType="Self.Group" />
     <EntitySet Name="Role" EntityType="Self.Role" />
     <EntitySet Name="User" EntityType="Self.User" />
     <AssociationSet Name="User_role" Association="Self.User_role">
       <End Role="Role" EntitySet="Role" />
       <End Role="User" EntitySet="User" />
     </AssociationSet>
-    <EntitySet Name="Group" EntityType="UserModel.Group" />
   </EntityContainer>
-  <EntityType Name="Group">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="year" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
-    <Property Name="litera" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
-    <Property Name="sub_group" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
-    <Property Name="count_classes" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="name" Type="String" Nullable="false" MaxLength="33" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
-  </EntityType>
 </Schema>

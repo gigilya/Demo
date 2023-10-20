@@ -9,6 +9,6 @@ namespace ДЭ1
 {
     internal class Singleton
     {
-        public static UserEntities3 BD { get;  } = new UserEntities3();
+        public static UserEntities4 BD { get;  } = new UserEntities4();
     }
 }

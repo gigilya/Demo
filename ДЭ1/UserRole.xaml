@@ -1,4 +1,4 @@
-﻿<Window x:Class="ДЭ1.AddStudent"
+﻿<Window x:Class="ДЭ1.UserRole"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ДЭ1"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="Форма добавления студента в группу" Height="450" Width="800">
+        Title="Установить роль пользователя" Height="450" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -20,22 +20,29 @@
         </Grid.ColumnDefinitions>
         <DockPanel Grid.Column="1" Grid.Row="1">
             <StackPanel>
-                <Label Content="Студент"/>
-                <ComboBox  x:Name="AddNameStudent" DisplayMemberPath = "last_name" >
+                <Label Content="Пользователь"/>
+                <ComboBox  x:Name="BoxUser" DisplayMemberPath = "login" SelectionChanged="BoxUser_SelectionChanged">
                 </ComboBox>
-                <Label Content="Группа"/>
-                <ComboBox x:Name="AddGroupStudent" DisplayMemberPath = "name"/>
+                <Label Content="Роль"/>
+                <ComboBox x:Name="User_Role" DisplayMemberPath = "name"/>
                 <StackPanel Orientation="Horizontal" 
                             HorizontalAlignment="Center">
                     <Button Content="Отменить" 
-                            Click="Cancel_click" 
+                            Click="Cancel_click"
                             Margin="10"/>
-                    <Button Content="Добавить" 
-                            Click ="Add_click" 
+                    <Button Content="Сохранитьь" 
+                            Click="Save_click"
                             Margin="10"/>
                 </StackPanel>
             </StackPanel>
         </DockPanel>
-        
+        <Button Grid.Column="2" 
+                Grid.Row="1" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Left" 
+                Width="26" Height="26" 
+                Margin="0,72,0,0"
+                Content="C"
+                Click="Clear_click"/>
     </Grid>
 </Window>

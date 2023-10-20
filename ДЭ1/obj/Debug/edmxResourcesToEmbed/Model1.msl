@@ -1,6 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище UserModelContainer" CdmEntityContainer="UserEntities3">
+  <EntityContainerMapping StorageEntityContainer="Хранилище UserModelContainer" CdmEntityContainer="UserEntities4">
+    <EntitySetMapping Name="Applicant">
+      <EntityTypeMapping TypeName="UserModel.Applicant">
+        <MappingFragment StoreEntitySet="Applicant">
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Group">
+      <EntityTypeMapping TypeName="UserModel.Group">
+        <MappingFragment StoreEntitySet="Group">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="litera" ColumnName="litera" />
+          <ScalarProperty Name="sub_group" ColumnName="sub_group" />
+          <ScalarProperty Name="count_classes" ColumnName="count_classes" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Role">
       <EntityTypeMapping TypeName="UserModel.Role">
         <MappingFragment StoreEntitySet="Role">
@@ -25,17 +47,5 @@
         <ScalarProperty Name="login" ColumnName="login" />
       </EndProperty>
     </AssociationSetMapping>
-    <EntitySetMapping Name="Group">
-      <EntityTypeMapping TypeName="UserModel.Group">
-        <MappingFragment StoreEntitySet="Group">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="count_classes" ColumnName="count_classes" />
-          <ScalarProperty Name="sub_group" ColumnName="sub_group" />
-          <ScalarProperty Name="litera" ColumnName="litera" />
-          <ScalarProperty Name="year" ColumnName="year" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

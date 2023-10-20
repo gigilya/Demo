@@ -50,3 +50,5 @@ C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\D
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1.csproj.CopyComplete
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1.exe
 C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\ДЭ1.pdb
+C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\UserRole.g.cs
+C:\Users\gerka\OneDrive\Рабочий стол\коды\demo_public\ДЭ1\obj\Debug\UserRole.baml

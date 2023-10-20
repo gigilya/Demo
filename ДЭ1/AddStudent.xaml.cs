@@ -23,32 +23,19 @@ namespace ДЭ1
         public AddStudent()
         {
             InitializeComponent();
-            //Loaded += Window_Loaded;
-        }
-
-        private void AddStudent_Loaded(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //add_student.ItemsSource = Singleton.BD.Entrant.Local;
             AddGroupStudent.ItemsSource = Singleton.BD.Group.Local.ToList();
-            AddGroupStudent.DisplayMemberPath = "name";
-        }
 
-        private void Cancel_click(object sender, RoutedEventArgs e) => DialogResult = false;
+            AddNameStudent.ItemsSource = Singleton.BD.Applicant.ToList();
+        }            //AddNameStudent.ItemsSource = Singleton.BD.Applicant.Local.ToList();
+
+        private void Cancel_click(object sender, RoutedEventArgs e) => Close();
  
 
-        private void Add_click(object sender, RoutedEventArgs e)
-        {
-            Singleton.BD.SaveChanges();
-        }
-        private void Add_group_student (object sender, RoutedEventArgs e)
-        {
-            //Group group = new Group();
+        private void Add_click(object sender, RoutedEventArgs e) => Singleton.BD.SaveChanges();
 
-        }
     }
 }

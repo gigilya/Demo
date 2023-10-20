@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Хранилище UserModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Applicant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="first_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="last_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="middle_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="Group">
     <Key>
       <PropertyRef Name="id" />
@@ -25,8 +34,6 @@
     <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "User.dbo.User_role" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
   <EntityType Name="User_role">
     <Key>
       <PropertyRef Name="login" />
@@ -60,15 +67,11 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="Хранилище UserModelContainer">
+    <EntitySet Name="Applicant" EntityType="Self.Applicant" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="User_role" EntityType="Self.User_role" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [User_role].[login] AS [login], 
-    [User_role].[role] AS [role]
-    FROM [dbo].[User_role] AS [User_role]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="User_role" EntityType="Self.User_role" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_User_role_Role" Association="Self.FK_User_role_Role">
       <End Role="Role" EntitySet="Role" />
       <End Role="User_role" EntitySet="User_role" />
